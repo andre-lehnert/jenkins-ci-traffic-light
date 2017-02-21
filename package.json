@@ -1,0 +1,22 @@
+{
+  "name": "jenkins-ci-traffic-light",
+  "version": "0.0.1",
+  "description": "Display build pipeline status",
+  "main": "app.js",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "repository": {
+    "type": "Git",
+    "url": "https://github.com/andre-lehnert/jenkins-ci-traffic-light"
+  },
+  "author": "Andre Lehnert <contact@andre-lehnert.de> (http://andre-lehnert.de/)",
+  "devDependencies": {
+    "rimraf": "^2.5.2"
+  },
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}

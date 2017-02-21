@@ -1,0 +1,43 @@
+
+
+
+<div infinite-scroll='loadMore()'  infinite-scroll-disabled="isLoading" layout="column">
+
+<div layout="row">
+    <div flex-offset="5" flex="90">
+      <div class="md-padding" layout="column">
+
+        <div flex-offset="5" >
+          <h2 class="md-headline card-list-headline">Headline</h2>
+        </div>
+
+
+        <div layout="row" >
+          <md-card flex >
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline" style="color: #F9A825" >Card</span>
+              </md-card-title-text>
+            </md-card-title>
+
+            <md-card-content>
+	    	Content             
+            </md-card-content>
+      	  </md-card>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div  layout="row" layout-align="center" ng-show="isLoading" >
+  <div>
+
+    <div layout="row" layout-sm="column" layout-align="space-around" style="margin-top: 20px">
+          <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
+
+  </div>
+</div>

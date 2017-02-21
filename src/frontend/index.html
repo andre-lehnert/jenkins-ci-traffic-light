@@ -1,0 +1,115 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jenkins-ci-traffic-light/</title>
+  <link rel="icon" type="image/png" href="img/like.png">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" type="text/css" href="css/angular-material.min.css">
+  <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/font-roboto.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/rzslider.css"/>
+  <link rel="stylesheet" type="text/css" href="css/colorpicker.css"/>
+  <link rel="stylesheet" href="css/json-formatter.min.css" />
+
+  <link rel="stylesheet" href="css/angular-material-layout.css" />
+</head>
+<body>
+
+  <!-- AngularJS Application -->
+  <div ng-cloak layout="column" class="sidenavdemoBasicUsage toolbardemoBasicUsage" ng-app="TaNo">
+
+    <div ng-controller="MenuController">
+
+      <header>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <!-- Toogle SideNav -->
+            <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()" >
+              <i class="material-icons">view_headline</i>
+            </md-button>
+            <!-- Title -->
+            <h1 class="md-headline">
+              <span>{{currentPage.text}}</span>
+            </h1>
+            <span flex></span>
+          </div>
+        </md-toolbar>
+      </header>
+
+
+      <!-- SideNav -->
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" >
+        <!-- SideNav Title -->
+        <md-toolbar class="md-theme-indigo" >
+          <p class="md-toolbar-tools">AppTitle</p>
+        </md-toolbar>
+
+        <!-- Control List -->
+        <md-list>
+          <a href="{{page.path}}" style="color: rgba(0,0,0, 0.54); text-decoration: none;"  class="sidenav-link" ng-repeat="page in mainPages" ng-click="navigateTo(page);">
+            <md-list-item class="sidenav-list-item">
+              <i class="material-icons">{{page.icon}}</i>
+              <span class="md-subhead">{{page.text}}</span>
+            </md-list-item>
+          </a>         
+        </md-list>
+      </md-sidenav>
+
+    </div>
+
+    <!-- Page View -->
+    <div ng-view id="content"></div>
+    <!-- Page View -->
+
+    <footer><!-- Andre Lehnert, 2016 --></footer>
+
+  </div>
+
+  <!-- JQuery -->
+  <script src='js/jquery.min.js'></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/angular-aria.min.js"></script>
+  <script src="js/angular-messages.min.js"></script>
+  <script src="js/angular-route.min.js"></script>
+  <script src="js/angular-cookies.min.js"></script>
+  <script src="js/svg-assets-cache.js"></script>
+
+
+  <!-- Angular Material Library -->
+  <script src="js/angular-material.min.js"></script>
+
+  <!-- AngularJS Slider -->
+  <script src="js/ui-bootstrap-tpls.js"></script>
+  <script src="js/rzslider.js"></script>
+
+  <!-- Color Picker -->
+  <script src="js/bootstrap-colorpicker-module.js"></script>
+
+  <!-- Chart.js -->
+  <script src="js/Chart.min.js"></script>
+  <script src="js/angular-chart.min.js"></script>
+
+  <script src="js/json-formatter.min.js"></script>
+
+  <!-- Drag and Drop -->
+  <script src="js/angular-dragdrop.min.js"></script>
+
+  <!-- Infinite Scroll -->
+  <script type="text/javascript" src="js/ng-infinite-scroll.js"></script>
+
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript" src="/src/application.js"></script>
+    <!-- AngularJS - Modules -->
+    <!-- Navigation & Routing -->
+    <script type="text/javascript" src="/src/controller/controller-navigation.js"></script>
+    <!-- Main Pages -->
+    
+</body>
+</html>
